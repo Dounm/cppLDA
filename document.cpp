@@ -26,6 +26,7 @@ Document& Document::operator=(const Document& other) {
 
 void Document::set_wordid_vec(Str2Int_Hashmap* word2id_hm,  
         Str_Vec* id2word_vec) {
+    _wordid_vec.resize(_word_vec.size());
     size_t unique_word_num = id2word_vec->size();
     for (size_t i = 0;i < _word_vec.size(); ++i) {
         std::string cur_word = _word_vec[i];

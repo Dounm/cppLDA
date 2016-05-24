@@ -36,6 +36,12 @@ public:
     size_t get_total_word_num() const {
         return _total_word_num;
     }
+    const Document& get_ith_doc(size_t i) const {
+        return _doc_vec.at(i);
+    }
+    std::string get_word_by_wordid(size_t wordid) const {
+        return _id2word_vec.at(wordid);
+    }
 
     void read_train_file(const std::string& train_file);
 
